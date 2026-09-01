@@ -1,3 +1,18 @@
+CREATE TABLE IF NOT EXISTS "calculated_performance_metrics" (
+"Amfi Code" INTEGER,
+  "CAGR_Annualized" REAL,
+  "Annualized_Vol" REAL,
+  "Sharpe_Ratio" REAL,
+  "Historical_VaR_95" REAL
+);
+CREATE TABLE IF NOT EXISTS "recommended_funds" (
+"Amfi_Code" REAL,
+  "Scheme_Name" TEXT,
+  "Category" TEXT,
+  "Sharpe_Ratio" REAL,
+  "CAGR" REAL,
+  "Score" REAL
+);
 CREATE TABLE IF NOT EXISTS "scheme_performance" (
 "amfi_code" INTEGER,
   "scheme_name" TEXT,
@@ -47,19 +62,4 @@ CREATE TABLE IF NOT EXISTS "monthly_sip_inflows" (
   "new_sip_accounts_lakh" REAL,
   "sip_aum_lakh_crore" REAL,
   "yoy_growth_pct" REAL
-);
-CREATE TABLE IF NOT EXISTS "calculated_performance_metrics" (
-"Amfi Code" INTEGER,
-  "CAGR_Annualized" REAL,
-  "Annualized_Vol" REAL,
-  "Sharpe_Ratio" REAL,
-  "Historical_VaR_95" REAL
-);
-CREATE TABLE IF NOT EXISTS "recommended_funds" (
-"Amfi_Code" REAL,
-  "Scheme_Name" TEXT,
-  "Category" TEXT,
-  "Sharpe_Ratio" REAL,
-  "CAGR" REAL,
-  "Score" REAL
 );
